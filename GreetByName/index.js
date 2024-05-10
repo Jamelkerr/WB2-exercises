@@ -1,15 +1,21 @@
+"use strict"
+
 window.onload = init;
 
-function init(){
+function init() {
 
-    const greetBtnElement = document.getElementById("greetBtn");
-  
+    const onGreetUserBtn = document.getElementById("greetBtn");
+    
+    onGreetUserBtn.onclick = onClickMessage;
 
-    greetBtnElement.onclick = onGreetUserBtnClicked;
 }
 
-function onGreetUserBtnClicked(){
-    //console.log(nameField.value);
-    const nameField = document.getElementById("nameField");
-    alert(`Hello ${nameField.value}`);
+function onClickMessage () {
+
+    var userNameInput = document.getElementById("nameField");
+
+    var greetName = userNameInput.value;
+
+    alert ("Hello " + greetName)
+
 }
